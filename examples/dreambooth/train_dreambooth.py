@@ -769,7 +769,7 @@ def main(args):
                             generator=g_cuda
                         ).images
                         images[0].save(os.path.join(sample_dir, f"{i}.png"))
-                del pipeline
+                #del pipeline
                 if torch.cuda.is_available():
                     torch.cuda.empty_cache()
 
