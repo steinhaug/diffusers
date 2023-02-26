@@ -796,7 +796,7 @@ def main(args):
                 if torch.cuda.is_available():
                     torch.cuda.empty_cache()
 
-            if args.save_sample_prompt_2 is not "":
+            if args.save_sample_prompt_2 != "":
                 if args.save_sample_prompt_2 is not None:
                     pipeline = pipeline.to(accelerator.device)
                     g_cuda = torch.Generator(device=accelerator.device).manual_seed(args.seed)
@@ -816,7 +816,7 @@ def main(args):
                     if torch.cuda.is_available():
                         torch.cuda.empty_cache()
 
-            if args.save_sample_prompt_3 is not "":
+            if args.save_sample_prompt_3 != "":
                 if args.save_sample_prompt_3 is not None:
                     pipeline = pipeline.to(accelerator.device)
                     g_cuda = torch.Generator(device=accelerator.device).manual_seed(args.seed)
@@ -836,7 +836,7 @@ def main(args):
                     if torch.cuda.is_available():
                         torch.cuda.empty_cache()
 
-            if args.save_sample_prompt_4 is not "":
+            if args.save_sample_prompt_4 != "":
                 if args.save_sample_prompt_4 is not None:
                     pipeline = pipeline.to(accelerator.device)
                     g_cuda = torch.Generator(device=accelerator.device).manual_seed(args.seed)
