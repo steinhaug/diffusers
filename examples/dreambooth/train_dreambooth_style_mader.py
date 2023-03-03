@@ -782,75 +782,75 @@ def main(args):
             pipeline = pipeline.to(accelerator.device)
             pipeline.set_progress_bar_config(disable=True)
             # a
-            g_cuda = torch.Generator(device=accelerator.device).manual_seed(1827821875)
+            g_cuda = torch.Generator(device=accelerator.device).manual_seed(696969)
             images = pipeline(
-                "RAW photo, winter landscape, mountains, trees, 8k uhd, dslr, soft lighting, high quality, film grain, Fujifilm XT3",
-                negative_prompt="(earings, deformed iris, deformed pupils, semi-realistic, cgi, 3d, render, sketch, cartoon, drawing, anime:1.4), text, close up, cropped, out of frame, worst quality, low quality, jpeg artifacts, ugly, duplicate, morbid, mutilated, extra fingers, mutated hands, poorly drawn hands, poorly drawn face, mutation, deformed, blurry, dehydrated, bad anatomy, bad proportions, extra limbs, cloned face, disfigured, gross proportions, malformed limbs, missing arms, missing legs, extra arms, extra legs, fused fingers, too many fingers, long neck",
-                height=512, width=512, guidance_scale=7, num_inference_steps=25, generator=g_cuda
+                "poster of a warrior goddess| standing alone on hill| centered| detailed gorgeous face| anime style| key visual| intricate detail| highly detailed| breathtaking| vibrant| panoramic| cinematic| Carne Griffiths| Conrad Roset| Makoto Shinkai",
+                negative_prompt="blurry| fuzzy| extra fingers| disfigured| cropped| bad fingers| deformed fingers| mutated fingers| out of frame",
+                height=512, width=512, guidance_scale=8, num_inference_steps=50, generator=g_cuda
             ).images
-            images[0].save(os.path.join(sample_dir, f"a1.png"))
-            g_cuda = torch.Generator(device=accelerator.device).manual_seed(1827821875)
+            images[0].save(os.path.join(sample_dir, f"101.png"))
+            g_cuda = torch.Generator(device=accelerator.device).manual_seed(696969)
             images = pipeline(
-                "RAW photo, winter landscape, mountains, trees, 8k uhd, dslr, soft lighting, high quality, film grain, Fujifilm XT3, Susanne Katleen Mader",
-                negative_prompt="(earings, deformed iris, deformed pupils, semi-realistic, cgi, 3d, render, sketch, cartoon, drawing, anime:1.4), text, close up, cropped, out of frame, worst quality, low quality, jpeg artifacts, ugly, duplicate, morbid, mutilated, extra fingers, mutated hands, poorly drawn hands, poorly drawn face, mutation, deformed, blurry, dehydrated, bad anatomy, bad proportions, extra limbs, cloned face, disfigured, gross proportions, malformed limbs, missing arms, missing legs, extra arms, extra legs, fused fingers, too many fingers, long neck",
-                height=512, width=512, guidance_scale=7, num_inference_steps=25, generator=g_cuda
+                "poster of a warrior goddess| standing alone on hill| centered| detailed gorgeous face| anime style| key visual| intricate detail| highly detailed| breathtaking| vibrant| panoramic| cinematic| Carne Griffiths| Conrad Roset| Makoto Shinkai| Susanne Katleen Mader",
+                negative_prompt="blurry| fuzzy| extra fingers| disfigured| cropped| bad fingers| deformed fingers| mutated fingers| out of frame",
+                height=512, width=512, guidance_scale=8, num_inference_steps=50, generator=g_cuda
             ).images
-            images[0].save(os.path.join(sample_dir, f"a2.png"))
-            g_cuda = torch.Generator(device=accelerator.device).manual_seed(1827821875)
+            images[0].save(os.path.join(sample_dir, f"102.png"))
+            g_cuda = torch.Generator(device=accelerator.device).manual_seed(696969)
             images = pipeline(
-                "RAW photo, winter landscape, mountains, trees, 8k uhd, dslr, soft lighting, high quality, film grain, Fujifilm XT3, Susanne Katleen Mader Rondo",
-                negative_prompt="(earings, deformed iris, deformed pupils, semi-realistic, cgi, 3d, render, sketch, cartoon, drawing, anime:1.4), text, close up, cropped, out of frame, worst quality, low quality, jpeg artifacts, ugly, duplicate, morbid, mutilated, extra fingers, mutated hands, poorly drawn hands, poorly drawn face, mutation, deformed, blurry, dehydrated, bad anatomy, bad proportions, extra limbs, cloned face, disfigured, gross proportions, malformed limbs, missing arms, missing legs, extra arms, extra legs, fused fingers, too many fingers, long neck",
-                height=512, width=512, guidance_scale=7, num_inference_steps=25, generator=g_cuda
+                "poster of a warrior goddess| standing alone on hill| centered| detailed gorgeous face| anime style| key visual| intricate detail| highly detailed| breathtaking| vibrant| panoramic| cinematic| Carne Griffiths| Conrad Roset| Makoto Shinkai| Susanne Katleen Mader Rondo",
+                negative_prompt="blurry| fuzzy| extra fingers| disfigured| cropped| bad fingers| deformed fingers| mutated fingers| out of frame",
+                height=512, width=512, guidance_scale=8, num_inference_steps=50, generator=g_cuda
             ).images
-            images[0].save(os.path.join(sample_dir, f"a3.png"))
+            images[0].save(os.path.join(sample_dir, f"102.png"))
             if torch.cuda.is_available():
                 torch.cuda.empty_cache()
             # b
-            g_cuda = torch.Generator(device=accelerator.device).manual_seed(2992403973)
+            g_cuda = torch.Generator(device=accelerator.device).manual_seed(4289232563)
             images = pipeline(
-                "A very beautiful Russian light skinned woman standing in the fresh, clean and calm river. She is naked. She has has 50DD size breasts, normal hip and bright green eyes. (high detailed skin:1.2), 8k uhd, dslr, soft lighting, high quality, film grain, Fujifilm XT3",
-                negative_prompt="(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, to lie down, TEXT, watermark, low quality",
-                height=1024, width=512, guidance_scale=7, num_inference_steps=35, generator=g_cuda
+                "Sango fantasy, fantasy magic, intricate, sharp focus, illustration, highly detailed, digital painting, concept art, matte, Artgerm and Paul lewin and kehinde wiley, masterpiece",
+                negative_prompt="circles, bad anatomy| blurry| fuzzy| extra legs| extra arms| extra fingers| poorly drawn hands| poorly drawn feet| disfigured| out of frame| tiling| bad art| deformed| mutated| double face",
+                height=512, width=512, guidance_scale=7, num_inference_steps=30, generator=g_cuda
             ).images
-            images[0].save(os.path.join(sample_dir, f"b1.png"))
-            g_cuda = torch.Generator(device=accelerator.device).manual_seed(2992403973)
+            images[0].save(os.path.join(sample_dir, f"201.png"))
+            g_cuda = torch.Generator(device=accelerator.device).manual_seed(4289232563)
             images = pipeline(
-                "A very beautiful Russian light skinned woman standing in the fresh, clean and calm river. She is naked. She has has 50DD size breasts, normal hip and bright green eyes. (high detailed skin:1.2), 8k uhd, dslr, soft lighting, high quality, film grain, Fujifilm XT3, Susanne Katleen Mader",
-                negative_prompt="(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, to lie down, TEXT, watermark, low quality",
-                height=1024, width=512, guidance_scale=7, num_inference_steps=35, generator=g_cuda
+                "Sango fantasy, fantasy magic, intricate, sharp focus, illustration, highly detailed, digital painting, concept art, matte, Artgerm and Paul lewin and kehinde wiley, masterpiece, Susanne Katleen Mader",
+                negative_prompt="circles, bad anatomy| blurry| fuzzy| extra legs| extra arms| extra fingers| poorly drawn hands| poorly drawn feet| disfigured| out of frame| tiling| bad art| deformed| mutated| double face",
+                height=512, width=512, guidance_scale=7, num_inference_steps=30, generator=g_cuda
             ).images
-            images[0].save(os.path.join(sample_dir, f"b2.png"))
-            g_cuda = torch.Generator(device=accelerator.device).manual_seed(2992403973)
+            images[0].save(os.path.join(sample_dir, f"202.png"))
+            g_cuda = torch.Generator(device=accelerator.device).manual_seed(4289232563)
             images = pipeline(
-                "A very beautiful Russian light skinned woman standing in the fresh, clean and calm river. She is naked. She has has 50DD size breasts, normal hip and bright green eyes. (high detailed skin:1.2), 8k uhd, dslr, soft lighting, high quality, film grain, Fujifilm XT3, Susanne Katleen Mader Rondo",
-                negative_prompt="(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, to lie down, TEXT, watermark, low quality",
-                height=1024, width=512, guidance_scale=7, num_inference_steps=35, generator=g_cuda
+                "Sango fantasy, fantasy magic, intricate, sharp focus, illustration, highly detailed, digital painting, concept art, matte, Artgerm and Paul lewin and kehinde wiley, masterpiece, Susanne Katleen Mader Rondo",
+                negative_prompt="circles, bad anatomy| blurry| fuzzy| extra legs| extra arms| extra fingers| poorly drawn hands| poorly drawn feet| disfigured| out of frame| tiling| bad art| deformed| mutated| double face",
+                height=512, width=512, guidance_scale=7, num_inference_steps=30, generator=g_cuda
             ).images
-            images[0].save(os.path.join(sample_dir, f"b3.png"))
+            images[0].save(os.path.join(sample_dir, f"203.png"))
             if torch.cuda.is_available():
                 torch.cuda.empty_cache()
             # c
-            g_cuda = torch.Generator(device=accelerator.device).manual_seed(4186429302)
+            g_cuda = torch.Generator(device=accelerator.device).manual_seed(47468)
             images = pipeline(
-                "RAW photo, a close up portrait photo of 30 y.o woman in wastelander clothes, redhair, short haircut, pale skin, slim body, background is city ruins, (high detailed skin:1.2), 8k uhd, dslr, soft lighting, high quality, film grain, Fujifilm XT3",
-                negative_prompt="(deformed iris, deformed pupils, semi-realistic, cgi, 3d, render, sketch, cartoon, drawing, anime:1.4), text, close up, cropped, out of frame, worst quality, low quality, jpeg artifacts, ugly, duplicate, morbid, mutilated, extra fingers, mutated hands, poorly drawn hands, poorly drawn face, mutation, deformed, blurry, dehydrated, bad anatomy, bad proportions, extra limbs, cloned face, disfigured, gross proportions, malformed limbs, missing arms, missing legs, extra arms, extra legs, fused fingers, too many fingers, long neck",
-                height=512, width=512, guidance_scale=7, num_inference_steps=25, generator=g_cuda
+                "Full body Portrait of Megan Fox as nubian princess,Eligent, photorealistic illustration, art by artgerm and greg rutkowski and alphonse mucha",
+                negative_prompt="",
+                height=512, width=512, guidance_scale=10, num_inference_steps=100, generator=g_cuda
             ).images
-            images[0].save(os.path.join(sample_dir, f"c1.png"))
-            g_cuda = torch.Generator(device=accelerator.device).manual_seed(4186429302)
+            images[0].save(os.path.join(sample_dir, f"301.png"))
+            g_cuda = torch.Generator(device=accelerator.device).manual_seed(47468)
             images = pipeline(
-                "RAW photo, a close up portrait photo of 30 y.o woman in wastelander clothes, redhair, short haircut, pale skin, slim body, background is city ruins, (high detailed skin:1.2), 8k uhd, dslr, soft lighting, high quality, film grain, Fujifilm XT3, Susanne Katleen Mader",
-                negative_prompt="(deformed iris, deformed pupils, semi-realistic, cgi, 3d, render, sketch, cartoon, drawing, anime:1.4), text, close up, cropped, out of frame, worst quality, low quality, jpeg artifacts, ugly, duplicate, morbid, mutilated, extra fingers, mutated hands, poorly drawn hands, poorly drawn face, mutation, deformed, blurry, dehydrated, bad anatomy, bad proportions, extra limbs, cloned face, disfigured, gross proportions, malformed limbs, missing arms, missing legs, extra arms, extra legs, fused fingers, too many fingers, long neck",
-                height=512, width=512, guidance_scale=7, num_inference_steps=25, generator=g_cuda
+                "Full body Portrait of Megan Fox as nubian princess,Eligent, photorealistic illustration, art by artgerm and greg rutkowski and alphonse mucha, Susanne Katleen Mader",
+                negative_prompt="",
+                height=512, width=512, guidance_scale=10, num_inference_steps=100, generator=g_cuda
             ).images
-            images[0].save(os.path.join(sample_dir, f"c2.png"))
-            g_cuda = torch.Generator(device=accelerator.device).manual_seed(4186429302)
+            images[0].save(os.path.join(sample_dir, f"302.png"))
+            g_cuda = torch.Generator(device=accelerator.device).manual_seed(47468)
             images = pipeline(
-                "RAW photo, a close up portrait photo of 30 y.o woman in wastelander clothes, redhair, short haircut, pale skin, slim body, background is city ruins, (high detailed skin:1.2), 8k uhd, dslr, soft lighting, high quality, film grain, Fujifilm XT3, Susanne Katleen Mader Rondo",
-                negative_prompt="(deformed iris, deformed pupils, semi-realistic, cgi, 3d, render, sketch, cartoon, drawing, anime:1.4), text, close up, cropped, out of frame, worst quality, low quality, jpeg artifacts, ugly, duplicate, morbid, mutilated, extra fingers, mutated hands, poorly drawn hands, poorly drawn face, mutation, deformed, blurry, dehydrated, bad anatomy, bad proportions, extra limbs, cloned face, disfigured, gross proportions, malformed limbs, missing arms, missing legs, extra arms, extra legs, fused fingers, too many fingers, long neck",
-                height=512, width=512, guidance_scale=7, num_inference_steps=25, generator=g_cuda
+                "Full body Portrait of Megan Fox as nubian princess,Eligent, photorealistic illustration, art by artgerm and greg rutkowski and alphonse mucha, Susanne Katleen Mader Rondo",
+                negative_prompt="",
+                height=512, width=512, guidance_scale=10, num_inference_steps=100, generator=g_cuda
             ).images
-            images[0].save(os.path.join(sample_dir, f"c3.png"))
+            images[0].save(os.path.join(sample_dir, f"303.png"))
             if torch.cuda.is_available():
                 torch.cuda.empty_cache()
 
