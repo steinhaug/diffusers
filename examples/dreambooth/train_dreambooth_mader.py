@@ -810,21 +810,21 @@ def main(args):
             images = pipeline(
                 "A very beautiful Russian light skinned woman standing in the fresh, clean and calm river. She is naked. She has has 50DD size breasts, normal hip and bright green eyes. (high detailed skin:1.2), 8k uhd, dslr, soft lighting, high quality, film grain, Fujifilm XT3",
                 negative_prompt="(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, to lie down, TEXT, watermark, low quality",
-                height=512, width=1024, guidance_scale=7, num_inference_steps=25, generator=g_cuda
+                height=1024, width=512, guidance_scale=7, num_inference_steps=35, generator=g_cuda
             ).images
             images[0].save(os.path.join(sample_dir, f"b1.png"))
             g_cuda = torch.Generator(device=accelerator.device).manual_seed(2992403973)
             images = pipeline(
                 "A very beautiful Russian light skinned woman standing in the fresh, clean and calm river. She is naked. She has has 50DD size breasts, normal hip and bright green eyes. (high detailed skin:1.2), 8k uhd, dslr, soft lighting, high quality, film grain, Fujifilm XT3, Susanne Katleen Mader",
                 negative_prompt="(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, to lie down, TEXT, watermark, low quality",
-                height=512, width=1024, guidance_scale=7, num_inference_steps=25, generator=g_cuda
+                height=1024, width=512, guidance_scale=7, num_inference_steps=35, generator=g_cuda
             ).images
             images[0].save(os.path.join(sample_dir, f"b2.png"))
             g_cuda = torch.Generator(device=accelerator.device).manual_seed(2992403973)
             images = pipeline(
                 "A very beautiful Russian light skinned woman standing in the fresh, clean and calm river. She is naked. She has has 50DD size breasts, normal hip and bright green eyes. (high detailed skin:1.2), 8k uhd, dslr, soft lighting, high quality, film grain, Fujifilm XT3, Susanne Katleen Mader Rondo",
                 negative_prompt="(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, to lie down, TEXT, watermark, low quality",
-                height=512, width=1024, guidance_scale=7, num_inference_steps=25, generator=g_cuda
+                height=1024, width=512, guidance_scale=7, num_inference_steps=35, generator=g_cuda
             ).images
             images[0].save(os.path.join(sample_dir, f"b3.png"))
             if torch.cuda.is_available():
