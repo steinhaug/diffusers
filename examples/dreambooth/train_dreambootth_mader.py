@@ -788,7 +788,23 @@ def main(args):
                 negative_prompt="(earings, deformed iris, deformed pupils, semi-realistic, cgi, 3d, render, sketch, cartoon, drawing, anime:1.4), text, close up, cropped, out of frame, worst quality, low quality, jpeg artifacts, ugly, duplicate, morbid, mutilated, extra fingers, mutated hands, poorly drawn hands, poorly drawn face, mutation, deformed, blurry, dehydrated, bad anatomy, bad proportions, extra limbs, cloned face, disfigured, gross proportions, malformed limbs, missing arms, missing legs, extra arms, extra legs, fused fingers, too many fingers, long neck",
                 height=512, width=512, guidance_scale=7, num_inference_steps=25, generator=g_cuda
             ).images
-            images[0].save(os.path.join(sample_dir, f"a.png"))
+            images[0].save(os.path.join(sample_dir, f"a1.png"))
+            g_cuda = torch.Generator(device=accelerator.device).manual_seed(1827821875)
+            images = pipeline(
+                "RAW photo, winter landscape, mountains, trees, 8k uhd, dslr, soft lighting, high quality, film grain, Fujifilm XT3, Susanne Katleen Mader",
+                negative_prompt="(earings, deformed iris, deformed pupils, semi-realistic, cgi, 3d, render, sketch, cartoon, drawing, anime:1.4), text, close up, cropped, out of frame, worst quality, low quality, jpeg artifacts, ugly, duplicate, morbid, mutilated, extra fingers, mutated hands, poorly drawn hands, poorly drawn face, mutation, deformed, blurry, dehydrated, bad anatomy, bad proportions, extra limbs, cloned face, disfigured, gross proportions, malformed limbs, missing arms, missing legs, extra arms, extra legs, fused fingers, too many fingers, long neck",
+                height=512, width=512, guidance_scale=7, num_inference_steps=25, generator=g_cuda
+            ).images
+            images[0].save(os.path.join(sample_dir, f"a2.png"))
+            g_cuda = torch.Generator(device=accelerator.device).manual_seed(1827821875)
+            images = pipeline(
+                "RAW photo, winter landscape, mountains, trees, 8k uhd, dslr, soft lighting, high quality, film grain, Fujifilm XT3, Susanne Katleen Mader Rondo",
+                negative_prompt="(earings, deformed iris, deformed pupils, semi-realistic, cgi, 3d, render, sketch, cartoon, drawing, anime:1.4), text, close up, cropped, out of frame, worst quality, low quality, jpeg artifacts, ugly, duplicate, morbid, mutilated, extra fingers, mutated hands, poorly drawn hands, poorly drawn face, mutation, deformed, blurry, dehydrated, bad anatomy, bad proportions, extra limbs, cloned face, disfigured, gross proportions, malformed limbs, missing arms, missing legs, extra arms, extra legs, fused fingers, too many fingers, long neck",
+                height=512, width=512, guidance_scale=7, num_inference_steps=25, generator=g_cuda
+            ).images
+            images[0].save(os.path.join(sample_dir, f"a3.png"))
+            if torch.cuda.is_available():
+                torch.cuda.empty_cache()
             # b
             g_cuda = torch.Generator(device=accelerator.device).manual_seed(2992403973)
             images = pipeline(
@@ -796,7 +812,23 @@ def main(args):
                 negative_prompt="(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, to lie down, TEXT, watermark, low quality",
                 height=512, width=1024, guidance_scale=7, num_inference_steps=25, generator=g_cuda
             ).images
-            images[0].save(os.path.join(sample_dir, f"b.png"))
+            images[0].save(os.path.join(sample_dir, f"b1.png"))
+            g_cuda = torch.Generator(device=accelerator.device).manual_seed(2992403973)
+            images = pipeline(
+                "A very beautiful Russian light skinned woman standing in the fresh, clean and calm river. She is naked. She has has 50DD size breasts, normal hip and bright green eyes. (high detailed skin:1.2), 8k uhd, dslr, soft lighting, high quality, film grain, Fujifilm XT3, Susanne Katleen Mader",
+                negative_prompt="(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, to lie down, TEXT, watermark, low quality",
+                height=512, width=1024, guidance_scale=7, num_inference_steps=25, generator=g_cuda
+            ).images
+            images[0].save(os.path.join(sample_dir, f"b2.png"))
+            g_cuda = torch.Generator(device=accelerator.device).manual_seed(2992403973)
+            images = pipeline(
+                "A very beautiful Russian light skinned woman standing in the fresh, clean and calm river. She is naked. She has has 50DD size breasts, normal hip and bright green eyes. (high detailed skin:1.2), 8k uhd, dslr, soft lighting, high quality, film grain, Fujifilm XT3, Susanne Katleen Mader Rondo",
+                negative_prompt="(deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), disconnected limbs, mutation, mutated, ugly, disgusting, blurry, amputation, to lie down, TEXT, watermark, low quality",
+                height=512, width=1024, guidance_scale=7, num_inference_steps=25, generator=g_cuda
+            ).images
+            images[0].save(os.path.join(sample_dir, f"b3.png"))
+            if torch.cuda.is_available():
+                torch.cuda.empty_cache()
             # c
             g_cuda = torch.Generator(device=accelerator.device).manual_seed(4186429302)
             images = pipeline(
@@ -804,7 +836,23 @@ def main(args):
                 negative_prompt="(deformed iris, deformed pupils, semi-realistic, cgi, 3d, render, sketch, cartoon, drawing, anime:1.4), text, close up, cropped, out of frame, worst quality, low quality, jpeg artifacts, ugly, duplicate, morbid, mutilated, extra fingers, mutated hands, poorly drawn hands, poorly drawn face, mutation, deformed, blurry, dehydrated, bad anatomy, bad proportions, extra limbs, cloned face, disfigured, gross proportions, malformed limbs, missing arms, missing legs, extra arms, extra legs, fused fingers, too many fingers, long neck",
                 height=512, width=512, guidance_scale=7, num_inference_steps=25, generator=g_cuda
             ).images
-            images[0].save(os.path.join(sample_dir, f"c.png"))
+            images[0].save(os.path.join(sample_dir, f"c1.png"))
+            g_cuda = torch.Generator(device=accelerator.device).manual_seed(4186429302)
+            images = pipeline(
+                "RAW photo, a close up portrait photo of 30 y.o woman in wastelander clothes, redhair, short haircut, pale skin, slim body, background is city ruins, (high detailed skin:1.2), 8k uhd, dslr, soft lighting, high quality, film grain, Fujifilm XT3, Susanne Katleen Mader",
+                negative_prompt="(deformed iris, deformed pupils, semi-realistic, cgi, 3d, render, sketch, cartoon, drawing, anime:1.4), text, close up, cropped, out of frame, worst quality, low quality, jpeg artifacts, ugly, duplicate, morbid, mutilated, extra fingers, mutated hands, poorly drawn hands, poorly drawn face, mutation, deformed, blurry, dehydrated, bad anatomy, bad proportions, extra limbs, cloned face, disfigured, gross proportions, malformed limbs, missing arms, missing legs, extra arms, extra legs, fused fingers, too many fingers, long neck",
+                height=512, width=512, guidance_scale=7, num_inference_steps=25, generator=g_cuda
+            ).images
+            images[0].save(os.path.join(sample_dir, f"c2.png"))
+            g_cuda = torch.Generator(device=accelerator.device).manual_seed(4186429302)
+            images = pipeline(
+                "RAW photo, a close up portrait photo of 30 y.o woman in wastelander clothes, redhair, short haircut, pale skin, slim body, background is city ruins, (high detailed skin:1.2), 8k uhd, dslr, soft lighting, high quality, film grain, Fujifilm XT3, Susanne Katleen Mader Rondo",
+                negative_prompt="(deformed iris, deformed pupils, semi-realistic, cgi, 3d, render, sketch, cartoon, drawing, anime:1.4), text, close up, cropped, out of frame, worst quality, low quality, jpeg artifacts, ugly, duplicate, morbid, mutilated, extra fingers, mutated hands, poorly drawn hands, poorly drawn face, mutation, deformed, blurry, dehydrated, bad anatomy, bad proportions, extra limbs, cloned face, disfigured, gross proportions, malformed limbs, missing arms, missing legs, extra arms, extra legs, fused fingers, too many fingers, long neck",
+                height=512, width=512, guidance_scale=7, num_inference_steps=25, generator=g_cuda
+            ).images
+            images[0].save(os.path.join(sample_dir, f"c3.png"))
+            if torch.cuda.is_available():
+                torch.cuda.empty_cache()
 
             if args.save_sample_prompt is not None:
                 pipeline = pipeline.to(accelerator.device)
