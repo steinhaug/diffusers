@@ -802,7 +802,7 @@ def main(args):
                 negative_prompt="blurry| fuzzy| extra fingers| disfigured| cropped| bad fingers| deformed fingers| mutated fingers| out of frame",
                 height=512, width=512, guidance_scale=8, num_inference_steps=50, generator=g_cuda
             ).images
-            images[0].save(os.path.join(sample_dir, f"102.png"))
+            images[0].save(os.path.join(sample_dir, f"103.png"))
             if torch.cuda.is_available():
                 torch.cuda.empty_cache()
             # b
